@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <style>
+      body{
+        display: block;
+        text-align:center;
+      }
+    #in{
+     width: 50%;
+		height:50px;
+		  border-radius: 25px;
+	padding:12px 20px
+}
+    #in:focus{
+        color: white;
+        background-color: black;
+      }
+      
+      #b{
+    display: block;
+    margin: 0 auto;
+    width:60px;
+
+      }
+      #b:hover{
+        color: white;
+        background-color:black;
+      }
+</style>
+    <script >function hash(str) {
+      r = ""
+      sub = ['O', 'S', 'F', 's', 'e', '(', 'N', 'f', '8', 'c', '`', 'U', 'q', 'C', 'n', '}', 'K', 'W', '>', 'h', 'a', 'w', 'I', '@', 'u', '.', '=', 'o', 'x', '+', '0', 'T', 't', '%', 'Q', 'M', 'E', '9', 'Y', '$', 'd', '?', 'j', 'B', 'l', ':', '~', '3', '!', 'v', '6', 'X', '1', 'Z', '/', '_', '7', 'A', '&', 'z', '[', 'r', 'G', '*', 'm', 'J', 'V', '5', '<', '-', 'g', 'P', ';', 'R', '^', ')', ']', 'b', 'p', '#', '4', 'D', 'i', '{', '2', 'y', 'H', 'k', 'L', ',']
+
+      for (let ind in str){
+        char = str[ind];  
+        n = (char.charCodeAt(0)*2)%sub.length
+        r += sub[n]
+        sub.push(sub.shift());
+      }
+      return r
+    }</script>
+  </head>
+  
+  <body>
+    <script>
+var d = localStorage.getItem('pwd')
+if(hash(d)=="/vV5~B"){}
+else{
+  p2=prompt("password");
+  localStorage.setItem('pwd',p2)
+  location.reload()
+}
+
+</script>
+  
+    <h1></h1>
+    
+    <form action="/search">
+      
+      <input type="text" id="in"  name="query" placeholder="url"/><br><br>
+      <input type="submit" value="Go!" id="b" />
+    </form>
+    
+  </body>
+</html>
