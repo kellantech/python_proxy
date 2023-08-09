@@ -1,0 +1,13 @@
+<div style="text-align:center;background-color:white;color:black">
+<form action="/search" name="i">
+<input type="text" id="in"  name="query" placeholder="url" style="width:50%;height:30px;"/>
+<input type="submit" value="Go!" id="b" />
+</form>
+
+<button onclick="history.back()">←</button><button onclick="location.reload()">↻</button><button onclick="history.forward()">→</button>
+<script>
+  document.forms["i"]["query"].value = "{{url}}"
+</script>
+</div>
+
+{{res|safe}}
