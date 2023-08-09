@@ -1,7 +1,6 @@
 import requests
 import re
 from urllib.parse import urljoin
-from logs import log
 from bs4 import BeautifulSoup
 def mod_res(r):
   url = "https://jade-secretive-plastic.glitch.me/"
